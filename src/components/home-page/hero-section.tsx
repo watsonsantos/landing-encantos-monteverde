@@ -243,7 +243,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="absolute bottom-16 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center">
+        <div className="absolute bottom-12 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center">
           <span
             title="Rolar para próxima secção!"
             className="grid size-8 place-items-center rounded-full border border-[#a9dfba]/35 bg-[#a9dfba]/10 text-[#d4efdc] backdrop-blur-sm"

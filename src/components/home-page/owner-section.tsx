@@ -105,14 +105,6 @@ export function OwnerSection({
                 aquilo que cada cliente procura.
               </p>
             </div>
-
-            <div className="mt-9 flex items-center gap-4">
-              <span className="size-2 rounded-full bg-[#7ccf9d]" />
-
-              <p className="text-[12px] font-medium text-[#193b31]/70">
-                Feito à mão em São Tomé
-              </p>
-            </div>
           </div>
         </div>
       </div>
