@@ -3,9 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-
-import { BrandMark } from "../brand/brand-mark";
 import { siteLinks } from "@/config/site";
+import Image from "next/image";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,14 +13,23 @@ export function Header() {
 
   return (
     <header className="fixed left-1/2 top-4 z-40 w-[calc(100%-2rem)] max-w-340 -translate-x-1/2 rounded-full bg-white/90 shadow-2xl backdrop-blur-md md:top-6 md:w-[calc(100%-4rem)] lg:w-[calc(100%-6rem)]">
-      <nav className="flex items-center justify-between px-5 py-3 md:px-12 lg:px-16">
+      <nav className="flex items-center justify-between px-5 py-3 md:px-10 lg:px-12">
         <Link
           href="#inicio"
           data-testid="link-logo"
           aria-label="Encantos Monte Verde, início"
           onClick={closeMenu}
         >
-          <BrandMark />
+          <Image
+            src="/images/logo.webp"
+            alt="Logotipo Encantos Monte Verde"
+            width={1000}
+            height={1000}
+            unoptimized
+            priority
+            quality={100}
+            className="h-10 w-40"
+          />
         </Link>
 
         <div className="hidden items-center gap-9 md:flex">

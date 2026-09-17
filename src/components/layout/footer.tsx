@@ -3,7 +3,6 @@
 // import { siteLinks } from "@/config/site";
 // import { BrandMark } from "../brand/brand-mark";
 
-
 // export function Footer() {
 //   return (
 //     <footer className="bg-[#0f2c23] px-5 py-8 text-[#d8eee0] md:px-10">
@@ -46,17 +45,11 @@
 //   );
 // }
 
-
-
 import Link from "next/link";
-import {
-  ArrowUp,
-  Facebook,
-  Instagram,
-} from "lucide-react";
+import { ArrowUp, Facebook, Instagram } from "lucide-react";
 
 import { siteLinks } from "@/config/site";
-import { BrandMark } from "../brand/brand-mark";
+import Image from "next/image";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -66,18 +59,28 @@ export function Footer() {
       <div className="mx-auto max-w-340 px-5 py-8 md:px-10">
         <div className="flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
           {/* Marca */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
             <Link
               href="#inicio"
               data-testid="link-footer-logo"
               aria-label="Encantos Monte Verde — voltar ao início"
               className="w-fit"
             >
-              <BrandMark dark />
+              <Image
+                src="/images/logo.webp"
+                alt="Logotipo Encantos Monte Verde"
+                width={1000}
+                height={1000}
+                unoptimized
+                priority
+                quality={100}
+                className="h-10 w-40"
+              />
             </Link>
 
-            <p className="max-w-[320px] text-[11px] leading-5 text-[#a9c8b2]/65">
-              Criações feitas à mão para momentos que merecem ser lembrados.
+            <p className="max-w-[320px] text-[11px] leading-5 text-[#a9c8b2]/80">
+              {/* Criações feitas à mão para momentos que merecem ser lembrados. */}
+              Feito com amor
             </p>
           </div>
 
@@ -144,13 +147,9 @@ export function Footer() {
 
         {/* Linha inferior */}
         <div className="mt-7 flex flex-col gap-2 border-t border-white/6 pt-5 text-[9px] uppercase tracking-[0.12em] text-[#789686]/55 sm:flex-row sm:items-center sm:justify-between">
-          <span>
-            © {currentYear} Encantos Monte Verde
-          </span>
+          <span>© {currentYear} Encantos Monte Verde</span>
 
-          <span>
-            São Tomé e Príncipe
-          </span>
+          <span>São Tomé e Príncipe</span>
         </div>
       </div>
     </footer>
