@@ -148,3 +148,15 @@ button, a { transition: transform .25s ease, background-color .25s ease, color .
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+@keyframes scrollHint {
+  0%,
+  100% {
+    transform: translateY(-2px);
+    opacity: 0.65;
+  }
+
+  50% {
+    transform: translateY(2px);
+    opacity: 1;
+  }
+}
